@@ -9,23 +9,36 @@
         <title>Rest Calculator</title>
     </head>
     <body class = "text-center m-4 ml-4">
-        <body class = "text-center m-4">
             <h1>Rest Calculator</h1>
-            <form action="/calculated" method="post">
-                <label>Enter your weekly hours of homework time (Vericlass estimated {{x}} hours for you).</label>
-                <input autocomplete="off" autofocus name="homeworkHours" value={{x}} type="number" step="any" class="form-control">
+            <form action="/calculated" method="post" name="Form" onsubmit="return validateForm()" aria-label="Rest Inputs">
+                <label id="homeworkLabel" for="a">Enter your weekly hours of homework time (Vericlass estimated {{x}} hours for you).</label>
+                <input autocomplete="off" autofocus name="homeworkHours" value={{x}} type="number" step="any" class="form-control" id="a">
                 <br>
-                <label>Enter your weekly hours of lecture time (Vericlass estimated {{y}} hours for you).</label>
-                <input autocomplete="off" autofocus name="lectureHours" value="{{y}}" type="number" step="any" class="form-control">
+                <label id="lectureLabel" for="b">Enter your weekly hours of lecture time (Vericlass estimated {{y}} hours for you).</label>
+                <input autocomplete="off" name="lectureHours" value="{{y}}" type="number" step="any" class="form-control" id="b">
                 <br>
-                <label>Enter your weekly hours of section time.</label>
-                <input autocomplete="off" autofocus name="sectionHours" placeholder="Section Time Hours" type="number" step="any" class="form-control">
+                <label id="sectionLabel" for="c">Enter your weekly hours of section time.</label>
+                <input autocomplete="off" name="sectionHours" placeholder="Section Time Hours" type="number" step="any" class="form-control" id="c">
                 <br>
-                <label>Enter your weekly hours of outside work, i.e. extracurriculars, work-study, etc.</label>
-                <input autocomplete="off" autofocus name="outsideHours" placeholder="Outside Work Hours" type="number" step="any" class="form-control">
-            </div>
-            <br>
+                <label id="outsideLabel" for="d">Enter your weekly hours of outside work, i.e. extracurriculars, work-study, etc.</label>
+                <input autocomplete="off" name="outsideHours" placeholder="Outside Work Hours" type="number" step="any" class="form-control" id="d">
+                <br>
+                <i>If your input is 0 hours, enter 0.</i>
+                <br>
+                <br>
                 <button type="submit" class="btn btn-primary">Go!</button>
             </form>
+    <script>
+        function validateForm() {
+          var a = document.forms["Form"]["homeworkHours"].value;
+          var b = document.forms["Form"]["lectureHours"].value;
+          var c = document.forms["Form"]["sectionHours"].value;
+          var d = document.forms["Form"]["outsideHours"].value;
+          if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "") {
+            alert("Please Fill All Required Fields.");
+            return false;
+          }
+        }
+    </script>
     </body>
 </html>
