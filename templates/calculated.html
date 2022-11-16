@@ -1,30 +1,18 @@
-from flask import Flask, render_template, request
+<!DOCTYPE html>
 
-app = Flask(__name__)
-
-@app.route("/", methods=["GET", "POST"])
-def initial():
-
-    if 'vericlass_outside_class' in request.args:
-        x = request.args.get('vericlass_outside_class')
-        y = request.args.get('vericlass_in_class')
-        return render_template("prefilled.html", x=x, y=y)
-    else:
-        return render_template("index.html")
-
-@app.route("/calculated", methods=["GET", "POST"])
-def calculate():
-    if request.method == "POST":
-        x = float(request.form.get("homeworkHours"))
-        y = float(request.form.get("lectureHours"))
-        z = float(request.form.get("outsideHours"))
-        s = float(request.form.get("sectionHours"))
-        coeff = 0.1917802797
-        mincoeff= 0.02783
-        researchNumber = round((coeff)*(x/7 + y/5 + z/7 + s/5)*60)
-        minNumber = round((mincoeff)*(x/7 + y/5 + z/7 + s/5)*60)
-        number = round((researchNumber + minNumber)/2)
-        return render_template("calculated.html", number = number)
-    else:
-        return render_template("index.html")
-
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <!-- http://getbootstrap.com/docs/5.1/ -->
+        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+        <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+        <title>Rest Calculator</title>
+    </head>
+    <body class = "text-center m-4 ml-4">
+        <h1 aria-label="title1">Rest Calculator</h1>
+    <main>
+        <h2 aria-label="title2">Your Calculation</h2>
+        <p>Based on our calculations, you require <strong>{{ number }}</strong> minutes of rest a day.</p>
+    </main>
+    </body>
+</html>
