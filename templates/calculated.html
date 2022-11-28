@@ -12,10 +12,21 @@
         <h1 aria-label="title1">Rest Calculator</h1>
     <main>
         <h2 aria-label="title2">Your Calculation</h2>
-        {% if hours > 1 %}
-        <p>Based on our calculations, you require <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day.</p>
-        {% elif hours == 1 %}
-        <p>Based on our calculations, you require <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day.</p>
+        {% if hours > 1 && minHours > 1%}
+        <p>Based on our calculations, you require <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take 
+            {{minHours}} hours and {{minMinutes}} minutes of rest a day.</p>        
+
+        {% elif hours > 1 && minHours == 1%}
+        <p>Based on our calculations, you require <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take 
+            {{minHours}} hour and {{minMinutes}} minutes of rest a day.</p>
+        
+        {% elif hours == 1 && minHours == 1%}
+        <p>Based on our calculations, you require <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take 
+            {{minHours}} hour and {{minMinutes}} minutes of rest a day.</p>
+
+        {% elif hours == 1 && minHours < 1%}
+            <p>Based on our calculations, you require <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take {{minMinutes}} minutes of rest a day.</p> 
+        
         {% else %}
         <p>Based on our calculations, you require <strong>{{ minutes }} minutes </strong>of rest a day.</p>
         {% endif %}
