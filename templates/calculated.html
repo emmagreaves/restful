@@ -12,21 +12,21 @@
         <h1 aria-label="title1">Rest Calculator</h1>
     <main>
         <h2 aria-label="title2">Your Calculation</h2>
-        {% if hours > 1 && minHours > 1%}
-        <p>Based on our calculations, you require <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take 
-            {{minHours}} hours and {{minMinutes}} minutes of rest a day.</p>        
+        {% if hours > 1 and minHours > 1%}
+        <p>Based on our calculations, you require <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take
+            {{minHours}} hours and {{minMinutes}} minutes of rest a day.</p>
 
-        {% elif hours > 1 && minHours == 1%}
-        <p>Based on our calculations, you require <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take 
-            {{minHours}} hour and {{minMinutes}} minutes of rest a day.</p>
-        
-        {% elif hours == 1 && minHours == 1%}
-        <p>Based on our calculations, you require <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take 
+        {% elif hours > 1 and minHours == 1%}
+        <p>Based on our calculations, you require <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take
             {{minHours}} hour and {{minMinutes}} minutes of rest a day.</p>
 
-        {% elif hours == 1 && minHours < 1%}
-            <p>Based on our calculations, you require <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take {{minMinutes}} minutes of rest a day.</p> 
-        
+        {% elif hours == 1 and minHours == 1%}
+        <p>Based on our calculations, you require <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take
+            {{minHours}} hour and {{minMinutes}} minutes of rest a day.</p>
+
+        {% elif hours == 1 and minHours < 1%}
+            <p>Based on our calculations, you require <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take {{minMinutes}} minutes of rest a day.</p>
+
         {% else %}
         <p>Based on our calculations, you require <strong>{{ minutes }} minutes </strong>of rest a day.</p>
         {% endif %}
@@ -36,25 +36,25 @@
         <br>
         <h3>Relaxation response</h3>
         <p class="text-justify">
-            The term "Relaxation Response" was coined by Dr. Herbert Benson, professor, author, 
-            cardiologist, and founder of Harvard’s Mind/Body Medical Institute. 
-            The response is defined as your personal ability to encourage your body to release chemicals and brain signals 
+            The term "Relaxation Response" was coined by Dr. Herbert Benson, professor, author,
+            cardiologist, and founder of Harvard’s Mind/Body Medical Institute.
+            The response is defined as your personal ability to encourage your body to release chemicals and brain signals
             that make your muscles and organs slow down and increase blood flow to the brain.
             <br>
             <br>
-            The Relaxation Response is essentially the opposite reaction to the “fight or flight” response. 
-            According to Dr. Benson, using the Relaxation Response is beneficial, as it counteracts the 
-            physiological effects of stress and the fight or flight response. The Relaxation Response is a helpful way 
-            to turn off the fight-or-flight response and bring the body back to pre-stress levels. 
+            The Relaxation Response is essentially the opposite reaction to the “fight or flight” response.
+            According to Dr. Benson, using the Relaxation Response is beneficial, as it counteracts the
+            physiological effects of stress and the fight or flight response. The Relaxation Response is a helpful way
+            to turn off the fight-or-flight response and bring the body back to pre-stress levels.
             <br>
             <br>
-            Research has shown that regular use of the Relaxation Response can help any health problem that is caused 
-            or exacerbated by chronic stress such as fibromyalgia, gastrointestinal ailments, insomnia, hypertension, 
+            Research has shown that regular use of the Relaxation Response can help any health problem that is caused
+            or exacerbated by chronic stress such as fibromyalgia, gastrointestinal ailments, insomnia, hypertension,
             anxiety disorders, and others.
             <br>
             <br>
-            The best time to practice the Relaxation Response is first thing in the morning for 10 to 20 minutes - 
-            this is in line with our minimum rest times. Practicing just once or twice daily can be enough to counteract the 
+            The best time to practice the Relaxation Response is first thing in the morning for 10 to 20 minutes -
+            this is in line with our minimum rest times. Practicing just once or twice daily can be enough to counteract the
             stress response and bring about deep relaxation and inner peace.
             <br>
             <br>
@@ -67,19 +67,19 @@
             1. Sit quietly in a comfortable position.
             <br>
             <br>
-            2. Close your eyes. 
+            2. Close your eyes.
             <br>
             <br>
             3. Deeply relax all your muscles.
             <br>
             <br>
-            4. Breathe through your nose. Become aware of your breathing. As you breathe out, say the word “ONE” silently to yourself. For example, breathe IN---OUT, “ONE”: IN…OUT, “ONE”: etc. Breathe easily and naturally. 
+            4. Breathe through your nose. Become aware of your breathing. As you breathe out, say the word “ONE” silently to yourself. For example, breathe IN---OUT, “ONE”: IN…OUT, “ONE”: etc. Breathe easily and naturally.
             <br>
             <br>
             5. Continue for 10 to 20 minutes. You may open your eyes to check the time, but do not use an alarm. When you finish, sit quietly for several minutes, at first with your eyes closed and later with your eyes opened. Do not stand up for a few minutes.
             <br>
             <br>
-            6. Do not worry about whether you are successful in achieving a deep level of relaxation. Maintain a passive attitude and permit relaxation to occur at its own pace. When distracting thoughts occur, merely return to repeating “ONE.” 
+            6. Do not worry about whether you are successful in achieving a deep level of relaxation. Maintain a passive attitude and permit relaxation to occur at its own pace. When distracting thoughts occur, merely return to repeating “ONE.”
             <br>
             <br>
             <i>Source: Benson, Herbert. “The Relaxation Response.” Brigham and Women's Faulkner Hospital, <a href="https://www.brighamandwomensfaulkner.org/assets/Faulkner/headache-center/documents/relaxation-response.pdf">
@@ -87,4 +87,4 @@
             </p>
     </main>
     </body>
-</html>
+</html>d
