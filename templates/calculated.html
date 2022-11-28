@@ -13,19 +13,19 @@
     <main>
         <h2 aria-label="title2">Your Calculation</h2>
         {% if hours > 1 and minHours > 1%}
-        <p>Based on our calculations, you require <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take
+        <p>Based on our calculations, you should take <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, try to get
             {{minHours}} hours and {{minMinutes}} minutes of rest a day.</p>
 
         {% elif hours > 1 and minHours == 1%}
-        <p>Based on our calculations, you require <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take
+        <p>Based on our calculations, you should take <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, try to get
             {{minHours}} hour and {{minMinutes}} minutes of rest a day.</p>
 
         {% elif hours == 1 and minHours == 1%}
-        <p>Based on our calculations, you require <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take
+        <p>Based on our calculations, you should take <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day, but at a minimum, try to get
             {{minHours}} hour and {{minMinutes}} minutes of rest a day.</p>
 
         {% elif hours == 1 and minHours < 1%}
-            <p>Based on our calculations, you require <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day, but at a minimum, take {{minMinutes}} minutes of rest a day.</p>
+            <p>Based on our calculations, you should take <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day, but at a minimum, try to get {{minMinutes}} minutes of rest a day.</p>
 
         {% else %}
         <p>Based on our calculations, you require <strong>{{ minutes }} minutes </strong>of rest a day.</p>
