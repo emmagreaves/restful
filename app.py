@@ -21,10 +21,11 @@ def calculate():
         s = float(request.form.get("sectionHours"))
         coeff = 0.1917802797
         mincoeff= 0.02783
-        number = round((coeff)*(x/7 + y/5 + z/7 + s/5)*60)
+        minutes = round((coeff)*(x/7 + y/5 + z/7 + s/5)*60)
         # minNumber = round((mincoeff)*(x/7 + y/5 + z/7 + s/5)*60)
         # number = round((researchNumber + minNumber)/2)
-        return render_template("calculated.html", number = number)
+        hours, minutes = divmod(minutes, 60)
+        return render_template("calculated.html", hours = hours, minutes = minutes)
     else:
         return render_template("index.html")
 
