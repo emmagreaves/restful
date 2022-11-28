@@ -20,6 +20,9 @@
         <p>Based on our calculations, you should take <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, try to take
             {{minHours}} hour and {{minMinutes}} minutes of rest a day.</p>
 
+        {% elif hours > 1 and minHours == 0%}
+        <p>Based on our calculations, you should take <strong>{{hours}} hours and {{ minutes }} minutes </strong>of rest a day, but at a minimum, try to take {{minMinutes}} minutes of rest a day.</p>
+
         {% elif hours == 1 and minHours == 1%}
         <p>Based on our calculations, you should take <strong>{{hours}} hour and {{ minutes }} minutes </strong>of rest a day, but at a minimum, try to take
             {{minHours}} hour and {{minMinutes}} minutes of rest a day.</p>
