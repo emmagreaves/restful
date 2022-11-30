@@ -19,7 +19,7 @@ def calculate():
         y = float(request.form.get("lectureHours"))
         z = float(request.form.get("outsideHours"))
         s = float(request.form.get("sectionHours"))
-        coeff = 0.1917802797
+        coeff = 0.19178
         mincoeff= 0.02783
         minutes = round((coeff)*(x/7 + y/5 + z/7 + s/5)*60)
         minMinutes = round((mincoeff)*(x/7 + y/5 + z/7 + s/5)*60)
