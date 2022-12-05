@@ -35,6 +35,7 @@
                 var b = document.forms["Form"]["lectureHours"].value;
                 var c = document.forms["Form"]["sectionHours"].value;
                 var d = document.forms["Form"]["outsideHours"].value;
+                var sum = a + b + c + d;
                 if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "") {
                   alert("Please Fill All Required Fields.");
                   return false;
