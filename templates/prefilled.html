@@ -40,10 +40,14 @@
                   return false;
               }
               else if (a < 0 || b < 0 || c < 0 || d < 0) {
-                  alert("Please enter a non-negative input.");
-                  return false;
-              } 
-          }
+                alert("Please enter a non-negative input.");
+                return false;
+            } 
+            else if (sum > 139) {
+                alert("Inputs exceed validated model.");
+                return false;
+        }
+    }
           </script>
     </body>
 </html>
