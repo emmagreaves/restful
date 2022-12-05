@@ -11,7 +11,7 @@
     </head>
     <body class = "text-center m-4"">
         <h1>Rest Calculator</h1>
-        <form action="/calculated" method="post" name = "Form" onsubmit="return validateForm()" aria-label="Rest Inputs">
+        <form action="/calculated" method="post" name = "Form" onsubmit="return validateForm() && validateSum()" aria-label="Rest Inputs">
             <label id="homeworkLabel" for="a">Enter your weekly hours of homework time. Refer to <a href="https://deploy-preview-90--determined-beaver-955cef.netlify.app/">Vericlass</a> for an estimate.</label>
             <input autocomplete="off" autofocus name="homeworkHours" placeholder="Homework Hours" type="number" step="any" class="form-control" id="a">
             <br>
@@ -30,11 +30,12 @@
             <button type="submit" class="btn btn-primary">Go!</button>
         </form>
         <script>
-              function validateForm() {
                 var a = document.forms["Form"]["homeworkHours"].value;
                 var b = document.forms["Form"]["lectureHours"].value;
                 var c = document.forms["Form"]["sectionHours"].value;
                 var d = document.forms["Form"]["outsideHours"].value;
+                var sum = a + b + c + d;
+              function validateForm() {
                 if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "") {
                   alert("Please Fill All Required Fields.");
                   return false;
@@ -45,6 +46,12 @@
                   return false;
               } 
           }
+            function validateSum() {
+                if (sum < 140) {
+                    alert("Input exceeds validated model.");
+                    return false;
+                }
+            }
           </script>
 
     </body>
