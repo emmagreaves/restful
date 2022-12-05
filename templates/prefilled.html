@@ -41,14 +41,19 @@
                 }
               
                 else if (a < 0 || b < 0 || c < 0 || d < 0) {
-                    alert("Please enter a non-negative input.");
-                    return false;
-                } 
-                else {
-                  return true;
+                  alert("Please enter a non-negative input.");
+                  return false;
+              }
+            else if (a + b + c + d > 139) {
+                alert("Input exceeds validated model.");
+                  return false;
             }
-  
+              
+              else {
+                return true;
           }
+
+        }
             </script>
     </body>
 </html>
