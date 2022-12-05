@@ -30,12 +30,11 @@
             <button type="submit" class="btn btn-primary">Go!</button>
         </form>
         <script>
+              function validateForm() {
                 var a = document.forms["Form"]["homeworkHours"].value;
                 var b = document.forms["Form"]["lectureHours"].value;
                 var c = document.forms["Form"]["sectionHours"].value;
                 var d = document.forms["Form"]["outsideHours"].value;
-                var sum = a + b + c + d;
-              function validateForm() {
                 if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "") {
                   alert("Please Fill All Required Fields.");
                   return false;
@@ -45,9 +44,11 @@
                   alert("Please enter a non-negative input.");
                   return false;
               } 
-              return true;
+              else {
+                return true;
           }
 
+        }
           </script>
 
     </body>

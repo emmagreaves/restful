@@ -30,23 +30,25 @@
                 <button type="submit" class="btn btn-primary">Go!</button>
             </form>
             <script>
-              function validateForm() {
-                var a = document.forms["Form"]["homeworkHours"].value;
-                var b = document.forms["Form"]["lectureHours"].value;
-                var c = document.forms["Form"]["sectionHours"].value;
-                var d = document.forms["Form"]["outsideHours"].value;
-                if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "") {
-                  alert("Please Fill All Required Fields.");
-                  return false;
-              }
-            
-              else if (a < 0 || b < 0 || c < 0 || d < 0) {
-                  alert("Please enter a non-negative input.");
-                  return false;
-              } 
-              return true;
+                function validateForm() {
+                  var a = document.forms["Form"]["homeworkHours"].value;
+                  var b = document.forms["Form"]["lectureHours"].value;
+                  var c = document.forms["Form"]["sectionHours"].value;
+                  var d = document.forms["Form"]["outsideHours"].value;
+                  if (a == null || a == "", b == null || b == "", c == null || c == "", d == null || d == "") {
+                    alert("Please Fill All Required Fields.");
+                    return false;
+                }
+              
+                else if (a < 0 || b < 0 || c < 0 || d < 0) {
+                    alert("Please enter a non-negative input.");
+                    return false;
+                } 
+                else {
+                  return true;
             }
-
-          </script>
+  
+          }
+            </script>
     </body>
 </html>
