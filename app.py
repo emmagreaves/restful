@@ -26,6 +26,7 @@ def calculate():
         hours, minutes = divmod(minutes, 60)
         minHours, minMinutes = divmod(minMinutes, 60)
         return render_template("calculated.html", hours = hours, minutes = minutes, minMinutes = minMinutes, minHours = minHours)
+        flash(sum)
     else:
         return render_template("index.html")
 
