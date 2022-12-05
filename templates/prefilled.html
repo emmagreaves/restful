@@ -45,9 +45,12 @@
                   alert("Please enter a non-negative input.");
                   return false;
               }
+              else if (sum > 139) {
+                alert("Input exceeds validated model.")
+                return false;
+              }
               
               else {
-                alert(sum);
                 return true;
           }
 
